@@ -1,0 +1,1 @@
+Conservative Argentine slang and chat-abbreviation normalizer. It applies only curated whole-word replacements while preserving names, case and punctuation; it is not a general grammar checker.
