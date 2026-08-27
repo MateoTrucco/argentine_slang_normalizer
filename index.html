@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A conservative Python text tool that normalizes a curated set of Argentine slang and chat abbreviations while preserving names, punctuation and unmapped text.">
+  <title>Argentine Slang Normalizer — Live Demo</title>
+  <link rel="stylesheet" href="web_demo/demo.css">
+  <script src="https://cdn.jsdelivr.net/pyodide/v314.0.4/full/pyodide.js"></script>
+  
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand">Mateo Trucco · Live Demo</div>
+      <nav class="links">
+        <a class="btn" href="https://github.com/MateoTrucco/argentine_slang_normalizer" target="_blank" rel="noreferrer">Source ↗</a>
+        <a class="btn" href="https://mateotrucco.github.io/">Portfolio</a>
+      </nav>
+    </header>
+    <section class="hero">
+      <div class="card">
+        <p class="eyebrow">Featured · Python · Text processing</p>
+        <h1>Argentine Slang Normalizer</h1>
+        <p class="muted">A conservative Python text tool that normalizes a curated set of Argentine slang and chat abbreviations while preserving names, punctuation and unmapped text.</p>
+      </div>
+      <aside class="card">
+        <span class="badge">DEMO</span>
+        <h2 style="margin-top:12px">Try it here</h2>
+        <p class="muted">This page is intentionally scoped as a portfolio demo. See the repository README for the full desktop/backend scope and limitations.</p>
+      </aside>
+    </section>
+    <section class="grid"><div class="card"><div class="field"><label for="source">Original text</label><textarea id="source">Q onda Mateo, toy buscando laburo y dps voy en bondi.</textarea></div><div class="actions"><button class="primary" id="run">Normalize</button><button id="example">Load example</button></div><p class="status" data-runtime-status>Preparing Python runtime…</p></div><div class="card"><h2>Normalized preview</h2><div class="output" id="output">Loading…</div><p class="muted" id="details"></p></div></section>
+    <footer class="footer">Demo site for <code>argentine_slang_normalizer</code>. Source and tests live in the repository.</footer>
+  </main>
+  <script type="module" src="web_demo/demo.js"></script>
+</body>
+</html>
