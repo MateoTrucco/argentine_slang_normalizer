@@ -4,15 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="A conservative Python text tool that normalizes a curated set of Argentine slang and chat abbreviations while preserving names, punctuation and unmapped text.">
-  <title>Argentine Slang Normalizer — Live Demo</title>
+  <title>Argentine Slang Normalizer — Interactive Lab</title>
   <link rel="stylesheet" href="web_demo/demo.css">
+  <link rel="stylesheet" href="web_demo/shell.css">
   <script src="https://cdn.jsdelivr.net/pyodide/v314.0.4/full/pyodide.js"></script>
   
 </head>
 <body>
   <main class="shell">
     <header class="topbar">
-      <div class="brand">Mateo Trucco · Live Demo</div>
+      <div class="brand">Mateo Trucco · Project Lab</div>
       <nav class="links">
         <a class="btn" href="https://github.com/MateoTrucco/argentine_slang_normalizer" target="_blank" rel="noreferrer">Source ↗</a>
         <a class="btn" href="https://mateotrucco.github.io/">Portfolio</a>
@@ -25,14 +26,15 @@
         <p class="muted">A conservative Python text tool that normalizes a curated set of Argentine slang and chat abbreviations while preserving names, punctuation and unmapped text.</p>
       </div>
       <aside class="card">
-        <span class="badge">DEMO</span>
-        <h2 style="margin-top:12px">Try it here</h2>
-        <p class="muted">This page is intentionally scoped as a portfolio demo. See the repository README for the full desktop/backend scope and limitations.</p>
+        <span class="badge">INTERACTIVE LAB</span>
+        <h2 style="margin-top:12px">Explore the workflow</h2>
+        <p class="muted">Use the interactive workspace below to exercise the project's core logic. Source, tests and setup instructions are available in the repository.</p>
       </aside>
     </section>
-    <section class="grid"><div class="card"><div class="field"><label for="source">Original text</label><textarea id="source">Q onda Mateo, toy buscando laburo y dps voy en bondi.</textarea></div><div class="actions"><button class="primary" id="run">Normalize</button><button id="example">Load example</button></div><p class="status" data-runtime-status>Preparing Python runtime…</p></div><div class="card"><h2>Normalized preview</h2><div class="output" id="output">Loading…</div><p class="muted" id="details"></p></div></section>
-    <footer class="footer">Demo site for <code>argentine_slang_normalizer</code>. Source and tests live in the repository.</footer>
+    <section class="grid"><div class="card"><div class="field"><label for="source">Original text</label><textarea id="source" maxlength="2000">Q onda Mateo, toy buscando laburo y dps voy en bondi.</textarea></div><div class="actions"><button class="primary" id="run">Normalize</button><button id="example">Next example</button><button id="clear">Clear</button></div><p class="status" data-runtime-status>Preparing Python runtime…</p><p class="notice">Runs the repository's conservative whole-word mapping. It never guesses grammar or rewrites words that are not explicitly configured.</p></div><div class="card"><h2>Normalized preview</h2><div class="output" id="output">Loading…</div><div class="metric-grid" id="details"></div><div class="pill-row" id="replacementList"></div></div></section>
+    <footer class="footer">Interactive browser build for <code>argentine_slang_normalizer</code> · source and tests live in the repository.</footer>
   </main>
+  <script type="module" src="web_demo/shell.js"></script>
   <script type="module" src="web_demo/demo.js"></script>
 </body>
 </html>
