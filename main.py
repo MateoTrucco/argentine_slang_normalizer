@@ -6,6 +6,7 @@ import tkinter as tk
 from tkinter import messagebox, ttk
 
 from normalizer import load_mapping, normalize
+from ui_theme import apply_theme, text_style
 
 
 class NormalizerApp:
@@ -14,6 +15,7 @@ class NormalizerApp:
         self.root.title("Argentine Slang Normalizer")
         self.root.geometry("900x620")
         self.root.minsize(700, 500)
+        self.colors = apply_theme(root, "#7c3aed")
         self.mapping = load_mapping()
 
         container = ttk.Frame(root, padding=18)
@@ -22,7 +24,7 @@ class NormalizerApp:
         container.columnconfigure(1, weight=1)
         container.rowconfigure(3, weight=1)
 
-        ttk.Label(container, text="Argentine Slang Normalizer", font=("Segoe UI", 22, "bold")).grid(
+        ttk.Label(container, text="Argentine Slang Normalizer", style="Title.TLabel").grid(
             row=0, column=0, columnspan=2, sticky="w"
         )
         ttk.Label(
@@ -37,10 +39,12 @@ class NormalizerApp:
         self.output = tk.Text(container, wrap="word", font=("Segoe UI", 11), padx=10, pady=10, state="disabled")
         self.output.grid(row=3, column=1, sticky="nsew", padx=(6, 0))
         self.source.insert("1.0", "Q onda Mateo, toy buscando laburo y dps voy en bondi.")
+        text_style(self.source, self.colors)
+        text_style(self.output, self.colors, readonly=True)
 
         actions = ttk.Frame(container)
         actions.grid(row=4, column=0, columnspan=2, sticky="ew", pady=10)
-        ttk.Button(actions, text="Normalize", command=self.run).pack(side="left")
+        ttk.Button(actions, text="Normalize", style="Accent.TButton", command=self.run).pack(side="left")
         ttk.Button(actions, text="Copy result", command=self.copy).pack(side="left", padx=8)
         self.status = tk.StringVar(value=f"{len(self.mapping)} conservative replacements loaded.")
         ttk.Label(actions, textvariable=self.status).pack(side="right")

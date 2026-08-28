@@ -21,14 +21,14 @@
     </header>
     <section class="hero">
       <div class="card">
-        <p class="eyebrow">Featured · Python · Text processing</p>
+        <p class="eyebrow" data-en="Featured · Python · Text processing" data-es="Destacado · Python · Procesamiento de texto">Featured · Python · Text processing</p>
         <h1>Argentine Slang Normalizer</h1>
-        <p class="muted">A conservative Python text tool that normalizes a curated set of Argentine slang and chat abbreviations while preserving names, punctuation and unmapped text.</p>
+        <p class="muted" data-en="A conservative Python text tool that normalizes a curated set of Argentine slang and chat abbreviations while preserving names, punctuation and unmapped text." data-es="Una herramienta Python conservadora que normaliza jerga argentina y abreviaturas seleccionadas, preservando nombres, puntuación y texto no configurado.">A conservative Python text tool that normalizes a curated set of Argentine slang and chat abbreviations while preserving names, punctuation and unmapped text.</p>
       </div>
       <aside class="card">
         <span class="badge">INTERACTIVE LAB</span>
-        <h2 style="margin-top:12px">Explore the workflow</h2>
-        <p class="muted">Use the interactive workspace below to exercise the project's core logic. Source, tests and setup instructions are available in the repository.</p>
+        <h2 style="margin-top:12px" data-en="Explore the workflow" data-es="Explorá el flujo">Explore the workflow</h2>
+        <p class="muted" data-en="This browser experience executes the repository's real Python normalizer through Pyodide." data-es="Esta experiencia ejecuta el normalizador Python real del repositorio mediante Pyodide.">This browser experience executes the repository's real Python normalizer through Pyodide.</p>
       </aside>
     </section>
     <section class="grid"><div class="card"><div class="field"><label for="source">Original text</label><textarea id="source" maxlength="2000">Q onda Mateo, toy buscando laburo y dps voy en bondi.</textarea></div><div class="actions"><button class="primary" id="run">Normalize</button><button id="example">Next example</button><button id="clear">Clear</button></div><p class="status" data-runtime-status>Preparing Python runtime…</p><p class="notice">Runs the repository's conservative whole-word mapping. It never guesses grammar or rewrites words that are not explicitly configured.</p></div><div class="card"><h2>Normalized preview</h2><div class="output" id="output">Loading…</div><div class="metric-grid" id="details"></div><div class="pill-row" id="replacementList"></div></div></section>
